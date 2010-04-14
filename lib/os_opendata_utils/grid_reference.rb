@@ -1,7 +1,9 @@
 module OsOpendataUtils
   class GridReference
 
-    include Utilities
+    require 'os_opendata_utils/utilities'
+    include OsOpendataUtils::Utilities
+
     attr_accessor :easting, :northing
 
     OSGB_F0  = 0.9996012717

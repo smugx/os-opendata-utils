@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{os-opendata-utils}
-  s.version = "1.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Neil Smith"]
@@ -19,10 +19,12 @@ Gem::Specification.new do |s|
     "README",
      "VERSION",
      "init.rb",
+     "lib/os-opendata-utils.rb",
      "lib/os_opendata_utils/grid_reference.rb",
      "lib/os_opendata_utils/lat_lng.rb",
      "lib/os_opendata_utils/ref_ell.rb",
-     "lib/os_opendata_utils/utilities.rb"
+     "lib/os_opendata_utils/utilities.rb",
+     "os-opendata-utils.gemspec"
   ]
   s.homepage = %q{http://github.com/smugx/os-opendata-utils}
   s.rdoc_options = ["--charset=UTF-8"]

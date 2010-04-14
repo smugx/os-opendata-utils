@@ -1,0 +1,11 @@
+I have yet to write a README. Some better documentation will come soon.
+
+However, the very basic usage that converts Ordnance Survey eastings and northings into latitudes/longitudes is something like:
+
+require 'os-opendata-utils'
+OsOpendataUtils::GridReference.new(357235,  171985).to_lat_lng
+
+CREDITS:
+
+Ruby implementation by Neil Smith - http://github.com/smugx
+Original PHP implementation of Latitude/Longitude conversion by Pezholio - http://github.com/pezholio/UK-Postcodes

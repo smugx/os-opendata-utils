@@ -1,7 +1,8 @@
 module OsOpendataUtils
   class LatLng
   
-    include Utilities
+    require 'os_opendata_utils/utilities'
+    include OsOpendataUtils::Utilities
 
     attr_accessor :lat, :lng
   
@@ -13,6 +14,10 @@ module OsOpendataUtils
   
     def to_s
       "(%f, %f)" % [@lat, @lng]
+    end
+    
+    def to_a
+      [@lat, @lng]
     end
   
     def osgb36_to_wgs84!
@@ -40,7 +45,7 @@ module OsOpendataUtils
       yB = ty + (rz * x) + (y * (1 + s)) + (-rx * z)
       zB = tz + (-ry * x) + (rx * y) + (z * (1 + s));
 
-      wgs84 = Geo::RefEll.new(6378137.000, 6356752.3141);
+      wgs84 = RefEll.new(6378137.000, 6356752.3141);
       a        = wgs84.maj
       b        = wgs84.min
       eSquared = wgs84.ecc
